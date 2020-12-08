@@ -1,4 +1,5 @@
 from flask_restx import Resource
+from ..service.id_service import check_id
 from ..util.dto import IdDto
 
 api = IdDto.api
@@ -11,5 +12,5 @@ class CheckID(Resource):
     #@api.marshal_with(_id)
     def get(self, id):
         """ ID integrity check """
-        return id
+        return check_id(id)
 

@@ -1,8 +1,10 @@
 from flask_script import Manager
 
 from app.main import create_app
+from app import blueprint
 
 app = create_app()
+app.register_blueprint(blueprint)
 manager = Manager(app)
 
 

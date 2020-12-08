@@ -11,4 +11,4 @@ api = Api(blueprint,
           description='Some random shitty but clean Flask API ...',
           )
 
-api.add_namespace(id_ns, path='/')
+api.add_namespace(id_ns)

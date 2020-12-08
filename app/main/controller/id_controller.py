@@ -5,11 +5,11 @@ api = IdDto.api
 _id = IdDto.id
 
 @api.route('/<id>')
-@api.doc('check id')
 #@api.expect(_id, validate=True)
 class CheckID(Resource):
-    """ ID integrity check """
+    @api.doc('ID integrity check')
     #@api.marshal_with(_id)
     def get(self, id):
+        """ ID integrity check """
         return id
 

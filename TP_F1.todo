@@ -1,0 +1,2 @@
+Code quality :
+- Linting : faire une passe sur le projet avec pycodestyle (+arg: max line length = 120)

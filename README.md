@@ -20,9 +20,9 @@ ou sous Windows:
 ```
 ### 3.3. Installation des dépendances
 Une fois l'environnement virtuel démarré, installer les dépendances de l'API avec la commande suivante:
-::: console
+``` console
 ('nom_du_venv') jo@LTPHP:/mnt/d/Workspace/Projets/TP1$ pip install -r requirements.txt
-:::
+```
 
 ## 2. Mise en service de l'API
 Toujours à la racine du répertoire du projet, démarrer le serveur flask avec la commande suivante:

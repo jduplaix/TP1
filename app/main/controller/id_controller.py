@@ -22,5 +22,8 @@ class CheckID(Resource):
     def get(self):
         """ ID creation """
         value = request.args.get('id', 1)
-        return create_id(value)
-
+        id = create_id(value)
+        if id == "bad_value":
+            api.abort(400)
+        else:
+            return id

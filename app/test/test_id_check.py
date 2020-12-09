@@ -1,5 +1,5 @@
 import unittest
-from app.main.service.id_service import check_id, check_structure, check_rule_Z, check_key_calculation
+from app.main.service.id_service import check_id, check_structure, check_rule_Z, check_key_calculation, create_id
 
 class TestCheckIdCases(unittest.TestCase):
     def test_id_structure_check(self):
@@ -29,7 +29,22 @@ class TestCheckIdCases(unittest.TestCase):
             "request":"A123456789",
             "result":0
         })
+    
+    def test_id_creation_Z_key(self):
+        good_id_Z = create_id("009999999")
+        self.assertTrue(good_id_Z == {
+            "status":"success",
+            "request":"009999999",
+            "result":"Z009999999"
+        })
 
+    def test_id_creation_calculated_key(self):
+        good_id_calc = create_id("123456789")
+        self.assertTrue(good_id_calc == {
+            "status":"success",
+            "request":"123456789",
+            "result":"J123456789"
+        })
         
 if __name__ == '__main__':
     unittest.main()

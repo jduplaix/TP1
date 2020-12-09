@@ -2,12 +2,34 @@ import re
 
 
 def create_id(value):
-    if int(value) < 10000000:
-        id = create_Z_id(value)
-    return id
+    try:
+        if isinstance(value, str) and len(value) == 9:
+            if int(value) < 10000000:
+                id = "Z" + value
+            else:
+                id = create_id_key(value)
+            response = {
+                "status": "success",
+                "request": value,
+                "result": id
+            }
+            return response
+        else:
+            return 'bad_value'
+    except Exception as e:
+        print(e)
+        return 'bad_value'
 
-def create_Z_id(value):
-    return "Z" + value
+
+def create_id_key(value):
+    key_calc = 16
+    value_calc = value
+    while key_calc > 15:
+        key_calc = 0
+        for car in value_calc:
+            key_calc += int(car)
+        value_calc = str(key_calc)
+    return chr(65 + key_calc) + value
 
 
 def check_id(id_to_check):

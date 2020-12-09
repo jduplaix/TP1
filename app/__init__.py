@@ -8,7 +8,7 @@ blueprint = Blueprint('api', __name__)
 api = Api(blueprint,
           title='TP1 API',
           version='1.0',
-          description='Some random shitty but clean Flask API ...',
+          description='Some random shitty Flask API, but clean hopefully ...',
           )
 
 api.add_namespace(id_ns)

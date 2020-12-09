@@ -1,5 +1,15 @@
 import re
 
+
+def create_id(value):
+    if int(value) < 10000000:
+        id = create_Z_id(value)
+    return id
+
+def create_Z_id(value):
+    return "Z" + value
+
+
 def check_id(id_to_check):
 
     check_status = check_structure(id_to_check) 

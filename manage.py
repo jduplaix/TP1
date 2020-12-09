@@ -8,7 +8,6 @@ app = create_app()
 app.register_blueprint(blueprint)
 manager = Manager(app)
 
-
 @manager.command
 def run():
     app.run(host="0.0.0.0", port=int("5000"), debug=True)

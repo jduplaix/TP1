@@ -7,7 +7,7 @@ def create_id(value):
             if int(value) < 10000000:
                 id = "Z" + value
             else:
-                id = create_id_key(value)
+                id = attach_id_key(value)
             response = {
                 "status": "success",
                 "request": value,
@@ -21,7 +21,7 @@ def create_id(value):
         return 'bad_value'
 
 
-def create_id_key(value):
+def attach_id_key(value):
     key_calc = 16
     value_calc = value
     while key_calc > 15:
@@ -33,7 +33,6 @@ def create_id_key(value):
 
 
 def check_id(id_to_check):
-
     check_status = check_structure(id_to_check) 
     if check_status > 0:
         check_status += check_rule_Z(id_to_check)
@@ -46,6 +45,7 @@ def check_id(id_to_check):
         "result": check_status if check_status == 0 else 1
     }
     return response
+
 
 def check_structure(id_to_check):
 

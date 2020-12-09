@@ -2,6 +2,8 @@ import unittest
 from app.main.service.id_service import check_id, check_structure, check_rule_Z, check_key_calculation, create_id
 
 class TestCheckIdCases(unittest.TestCase):
+
+    # cas de test liés à la vérification
     def test_id_structure_check(self):
         self.assertTrue(check_structure("A123456789") == 1)
         self.assertFalse(check_structure("A12345678") == 1)
@@ -30,6 +32,7 @@ class TestCheckIdCases(unittest.TestCase):
             "result":0
         })
     
+    # cas de test liés à la création
     def test_id_creation_Z_key(self):
         good_id_Z = create_id("009999999")
         self.assertTrue(good_id_Z == {

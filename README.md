@@ -43,7 +43,7 @@ Le serveur flask démarre avec la trace suivante:
  * Debugger PIN: 470-652-628
 ```
 ## 3. Accéder à l'API
-L'API peut être requêtée via curl sur la routes définies dans le TP (voir TP_F1.pdf et TP_F1 - Extension.pdf), ou bien via l'interface graphique de Swagger disponible sur
+L'API peut être requêtée via curl sur les routes définies dans le TP (voir TP_F1.pdf et TP_F1 - Extension.pdf), ou bien via l'interface graphique de Swagger disponible sur
 http://localhost:5000/
 
 ## 4. Éxecution des tests unitaires

@@ -2,18 +2,12 @@
 TP1 final clean code : API validation identifiant client 
 
 # Déploiement
-## 1. Récupérer les sources en local avec un client git
-``` git
-git clone https://github.com/jduplaix/TP1.git
-```
-
-
 ## 2. Environnement virtuel
 ### 2.1. Installation
 Dans le répertoire local du projet précédemment téléchargé, créer à la racine un environnement virtuel python :
-::: bash
-python3 -m venv 'nom_du_venv'
-:::
+``` bash
+jo@LTPHP:/mnt/d/Workspace/Projets/TP1$ python3 -m venv 'nom_du_venv'
+```
 Documentation venv: https://docs.python.org/3/tutorial/venv.html
 ### 2.2. Sourcing
 Une fois l'environnement virtuel installé, le sourcer avec la commande suivante sous linux:

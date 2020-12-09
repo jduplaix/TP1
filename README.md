@@ -11,9 +11,9 @@ git clone https://github.com/jduplaix/TP1.git
 ## 2. Environnement virtuel
 ### 2.1. Installation
 Dans le répertoire local du projet précédemment téléchargé, créer à la racine un environnement virtuel python :
-``` bash
+::: bash
 python3 -m venv 'nom_du_venv'
-```
+:::
 Documentation venv: https://docs.python.org/3/tutorial/venv.html
 ### 2.2. Sourcing
 Une fois l'environnement virtuel installé, le sourcer avec la commande suivante sous linux:

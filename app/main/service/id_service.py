@@ -1,18 +1,13 @@
 import re
 
+#class IdCheck()
 def check_id(id_to_check):
 
     check_status = check_structure(id_to_check) 
-    #DEGAGE LES PRINT
-    print(check_status)
     if check_status > 0:
         check_status += check_rule_Z(id_to_check)
-        #DEGAGE LES PRINT
-        print(check_status)
     if check_status == 1:
         check_status += check_key_calculation(id_to_check)
-        #DEGAGE LES PRINT
-        print(check_status)
 
     response = {
         "status": "success" if check_status > 0 else "failed",
@@ -28,8 +23,6 @@ def check_structure(id_to_check):
     ## Si l'ID ne match pas la REGEX, test_regex = null
     try:
         isinstance(test_regex.group(), str)
-        #DEGAGE LES PRINT
-        print(test_regex.group())
         return 1
     except Exception as e:
         print(e)
@@ -41,14 +34,8 @@ def check_rule_Z(id_to_check):
     id_key = id_to_check[0]
     id_value = int(id_to_check[1:])
     if id_key == "Z" and id_value < 10000000:
-        #DEGAGE LES PRINT
-        print(id_key)
-        print(id_value)
         return 1
     else:
-        #DEGAGE LES PRINT
-        print(id_key)
-        print(id_value)
         return 0
 
 def check_key_calculation(id_to_check):
@@ -60,12 +47,7 @@ def check_key_calculation(id_to_check):
         for car in id_value:
             key_calc += int(car)
         id_value = str(key_calc)
-        #DEGAGE LES PRINT
-        print(id_value, type(id_value))
-        print(key_calc)
     else:
-        #DEGAGE LES PRINT
-        print(65 + key_calc, " - ", ord(id_key))
         if ord(id_key) == 65 + key_calc:
             return 0
         else:

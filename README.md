@@ -5,33 +5,33 @@ TP1 final clean code : API validation identifiant client
 ## 1. Environnement virtuel
 ### 1.1. Installation
 Dans le répertoire local du projet précédemment téléchargé, créer à la racine un environnement virtuel python :
-``` bash
+``` console
 jo@LTPHP:/mnt/d/Workspace/Projets/TP1$ python3 -m venv 'nom_du_venv'
 ```
 Documentation venv: https://docs.python.org/3/tutorial/venv.html
 ### 1.2. Sourcing
 Une fois l'environnement virtuel installé, le sourcer avec la commande suivante sous linux:
-``` bash
-source 'nom_du_venv'/bin/activate
+``` console
+jo@LTPHP:/mnt/d/Workspace/Projets/TP1$ source 'nom_du_venv'/bin/activate
 ```
 ou sous Windows:
-``` powershell
+``` console
 'nom_du_venv'/Script/activate.bat
 ```
 ### 3.3. Installation des dépendances
 Une fois l'environnement virtuel démarré, installer les dépendances de l'API avec la commande suivante:
-::: bash
-pip install -r requirements.txt
+::: console
+('nom_du_venv') jo@LTPHP:/mnt/d/Workspace/Projets/TP1$ pip install -r requirements.txt
 :::
 
 ## 2. Mise en service de l'API
 Toujours à la racine du répertoire du projet, démarrer le serveur flask avec la commande suivante:
-``` bash
-python manage.py run
+``` console
+('nom_du_venv') jo@LTPHP:/mnt/d/Workspace/Projets/TP1$ python manage.py run
 ```
 Le serveur flask démarre avec la trace suivante:
-``` bash
-(venv) jo@LTPHP:/mnt/d/Workspace/Projets/TP1$ python manage.py run
+``` console
+('nom_du_venv') jo@LTPHP:/mnt/d/Workspace/Projets/TP1$ python manage.py run
  * Serving Flask app "app.main" (lazy loading)
  * Environment: production
    WARNING: This is a development server. Do not use it in a production deployment.
@@ -48,6 +48,6 @@ http://localhost:5000/
 
 ## 4. Éxecution des tests unitaires
 Toujours à la racine du répertoire du projet, démarrer le serveur flask avec la commande suivante:
-``` bash
-python manage.py test
+``` console
+('nom_du_venv') jo@LTPHP:/mnt/d/Workspace/Projets/TP1$ python manage.py test
 ```

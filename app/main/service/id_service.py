@@ -1,6 +1,5 @@
 import re
 
-#class IdCheck()
 def check_id(id_to_check):
 
     check_status = check_structure(id_to_check) 
